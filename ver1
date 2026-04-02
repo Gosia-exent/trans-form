@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel klienta</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Panel klienta</h1><p>Osobny widok klienta: podgląd, terminy i akceptacja dopiero po wysłaniu przez biuro.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab " href="dashboard.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab active" href="klient.html">Panel klienta</a></div>
+  
+<div class="grid-2">
+  <div>
+    <div class="card">
+      <div class="card-header"><div><h3>Panel klienta</h3><p>Klient podgląda status i akceptuje dopiero po wysłaniu etapu przez biuro.</p></div><a class="btn btn-primary" href="zlecenie.html">+ Dodaj zlecenie</a></div>
+      <div class="card-body">
+        <div class="stats">
+          <div class="stat"><div class="label">Postęp</div><div class="value">62%</div><div class="progress"><span style="width:62%"></span></div></div>
+          <div class="stat"><div class="label">Status ogólny</div><div class="value" style="font-size:22px;">Realizacja</div><div class="small">klient tylko podgląda</div></div>
+          <div class="stat"><div class="label">Termin</div><div class="value overdue" style="font-size:22px;">Po terminie</div><div class="small">widać to na dashboardzie</div></div>
+          <div class="stat"><div class="label">Do akceptacji</div><div class="value">0</div><div class="small">biuro jeszcze nie wysłało</div></div>
+        </div>
+        <div class="list">
+          <div class="vendor-card"><div class="vendor-head"><div><strong>MaxPrint – produkcja</strong><div class="small">Etap 1 zlecenia</div></div><span class="badge success">100%</span></div><div class="progress success"><span style="width:100%"></span></div></div>
+          <div class="vendor-card"><div class="vendor-head"><div><strong>Andrzej Nowicki – montaż</strong><div class="small">Etap 2 zlecenia</div></div><span class="badge warning">45%</span></div><div class="progress warning"><span style="width:45%"></span></div><div class="small">Klient widzi postęp, ale jeszcze nic nie akceptuje.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <div class="card-header"><div><h3>Akceptacja klienta</h3><p>Ten blok pojawia się dopiero, gdy biuro wyśle etap do akceptacji.</p></div></div>
+      <div class="card-body list">
+        <div class="task-card"><div class="task-top"><div><div class="task-title">Etap: montaż banera</div><div class="task-meta">Status obecny: oczekuje na weryfikację biura</div></div><span class="badge gray">Jeszcze bez akcji klienta</span></div></div>
+        <div class="task-card"><div class="task-top"><div><div class="task-title">Przykład po wysłaniu przez biuro</div><div class="task-meta">Tutaj klient może zaakceptować etap.</div></div><span class="badge success">Gotowe do akceptacji</span></div><div class="header-inline"><a class="btn btn-secondary" href="#">Podgląd dokumentacji</a><a class="btn btn-primary" href="#">Akceptuj etap</a></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main></div></body></html>
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel montera</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Panel montera</h1><p>Osobna strona z aktualnym zleceniem i historią wykonanych zadań.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab " href="dashboard.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab active" href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
+  
+<div class="card">
+  <div class="card-header"><div><h3>Panel montera</h3><p>Najpierw aktywne zlecenie, niżej archiwum zrealizowanych zadań.</p></div><span class="badge info">Andrzej Nowicki</span></div>
+  <div class="card-body">
+    <div class="subtitle"><div><div class="section-title">Aktualne zlecenie</div><h4>Regał sklepowy – etap montażu</h4></div><span class="badge danger">po terminie</span></div>
+    <div class="task-card" style="margin-bottom:18px;">
+      <div class="task-top">
+        <div><div class="task-title">Montaż banera na miejscu</div><div class="task-meta">Termin: 23.04.2026, 08:00 • Lokalizacja: Kartuzy</div></div>
+        <div class="header-inline"><span class="badge info">Zdjęcie obowiązkowe</span><span class="badge warning">W trakcie</span></div>
+      </div>
+      <div class="list">
+        <div>☑ Dojazd na miejsce</div><div>☑ Rozpakowanie materiałów</div><div>☑ Montaż banera</div><div>☐ Dodanie zdjęcia frontu</div>
+      </div>
+      <div class="photo-box">Monter może oznaczyć, że zdjęcie jest wymagane przez zadanie. Jeśli zdjęcie nie było obowiązkowe, karta nie blokuje zamknięcia.</div>
+    </div>
+    <div class="subtitle"><div><div class="section-title">Zrealizowane zadania</div></div><span class="badge success">archiwum</span></div>
+    <div class="list">
+      <div class="task-card"><div class="task-top"><div><div class="task-title">Ustawienie ekspozytora</div><div class="task-meta">Wykonano 19.04.2026</div></div><span class="badge success">Zaakceptowane przez biuro</span></div></div>
+      <div class="task-card"><div class="task-top"><div><div class="task-title">Montaż cenówek przy kasie</div><div class="task-meta">Wykonano 20.04.2026</div></div><span class="badge success">Przekazane do klienta</span></div></div>
+    </div>
+  </div>
+</div>
+
+</main></div></body></html>
+
+:root{
+  --bg:#f4f7fb;--card:#fff;--text:#162033;--muted:#6f7a8f;--line:#dfe7f1;
+  --primary:#8fa8e8;--primary-dark:#5a78d6;--primary-soft:#eaf0ff;
+  --success:#4caf50;--success-soft:#ecf8ec;--warning:#d99112;--warning-soft:#fbf2da;
+  --danger:#df544d;--danger-soft:#fdecec;--violet:#8b5cf6;--violet-soft:#efe8ff;
+  --shadow:0 14px 30px rgba(31,52,91,.08);--radius:24px;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+.app{display:grid;grid-template-columns:88px 1fr;min-height:100vh}
+.sidebar{background:#fff;border-right:1px solid var(--line);padding:18px 14px;display:flex;flex-direction:column;gap:14px;align-items:center}
+.logo{width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:#fff;font-size:22px;font-weight:800;display:grid;place-items:center;box-shadow:var(--shadow);margin-bottom:6px}
+.side-icon{width:46px;height:46px;border-radius:15px;border:1px solid var(--line);background:#fff;color:var(--muted);display:grid;place-items:center;font-size:18px}
+.main{padding:28px}
+.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px}
+h1,h2,h3,h4,p{margin:0}
+.title-wrap h1{font-size:34px;margin-bottom:8px;line-height:1.08}
+.title-wrap p{color:var(--muted);font-size:14px;max-width:850px}
+.top-actions,.header-inline,.tabs{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{border:0;border-radius:16px;padding:13px 20px;font-weight:700;cursor:pointer;display:inline-block}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:var(--shadow)}
+.btn-secondary{background:#fff;border:1px solid var(--line);color:var(--text)}
+.tabs{margin-bottom:18px}
+.tab{background:#fff;border:1px solid var(--line);color:var(--muted);padding:12px 18px;border-radius:16px;font-weight:700}
+.tab.active{background:var(--primary-soft);color:var(--primary-dark);border-color:#cfdcff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.card + .card{margin-top:18px}
+.card-header{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.card-header p,.small,.muted{color:var(--muted);font-size:13px}
+.card-body{padding:22px 24px 24px}
+.grid-2{display:grid;grid-template-columns:1.3fr .9fr;gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff}
+.label{font-size:13px;color:var(--muted);margin-bottom:8px}.value{font-size:30px;font-weight:800;line-height:1;margin-bottom:8px}
+.progress{width:100%;height:10px;background:#edf2f8;border-radius:999px;overflow:hidden;margin-top:8px}
+.progress>span{display:block;height:100%;background:linear-gradient(90deg,var(--primary),var(--primary-dark));border-radius:inherit}
+.progress.success>span{background:linear-gradient(90deg,#73c878,#4caf50)}
+.progress.warning>span{background:linear-gradient(90deg,#f0c055,#d99112)}
+.progress.danger>span{background:linear-gradient(90deg,#f08e8e,#df544d)}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+.badge.success{color:#328a36;background:var(--success-soft)} .badge.warning{color:#a16a04;background:var(--warning-soft)}
+.badge.danger{color:#b63c35;background:var(--danger-soft)} .badge.info{color:var(--primary-dark);background:var(--primary-soft)}
+.badge.violet{color:#7342e8;background:var(--violet-soft)} .badge.gray{color:#5d697d;background:#eff3f8}
+table{width:100%;border-collapse:collapse} th,td{padding:14px 12px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top;text-align:left}
+th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em;font-weight:800}
+.input{width:100%;background:#fff;border:1px solid #ccd8e6;border-radius:16px;min-height:58px;padding:16px 18px;color:var(--text);font-size:16px}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 24px}.form-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.field label{display:block;font-weight:800;font-size:15px;margin-bottom:10px}
+.workflow{display:flex;gap:26px;padding-top:18px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:18px;font-weight:700}
+.workflow span{color:var(--muted);position:relative;padding-bottom:10px}.workflow span.active{color:var(--text)}
+.workflow span.active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:99px;background:var(--text)}
+.list{display:grid;gap:12px}.task-card,.vendor-card{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff}
+.task-top,.vendor-head,.subtitle{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.task-title{font-size:17px;font-weight:800;margin-bottom:4px}.task-meta{color:var(--muted);font-size:13px}
+.history{position:relative;padding-left:28px}.history::before{content:"";position:absolute;left:12px;top:10px;bottom:10px;width:3px;border-radius:99px;background:#dbe3ef}
+.history-item{position:relative;padding:0 0 24px 24px}.history-item:last-child{padding-bottom:0}
+.history-dot{position:absolute;left:-4px;top:6px;width:18px;height:18px;border-radius:999px;border:4px solid #fff;box-shadow:0 0 0 2px rgba(255,255,255,.85)}
+.dot-blue{background:var(--primary-dark)}.dot-yellow{background:var(--warning)}.dot-red{background:#e56b63}.dot-green{background:#62c56d}.dot-violet{background:var(--violet)}.dot-orange{background:#ef8a15}
+.history-title{font-size:16px;font-weight:800;display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:4px}.quote{font-style:italic;color:#637189;margin-top:8px}
+.overdue{color:var(--danger);font-weight:800}.on-time{color:var(--success);font-weight:800}
+@media (max-width: 1200px){.grid-2,.stats,.form-grid,.form-grid-3,.grid-3{grid-template-columns:1fr}}
+@media (max-width: 920px){.app{grid-template-columns:1fr}.sidebar{display:none}.main{padding:18px}.topbar{flex-direction:column}}
+
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zlecenia</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Zlecenia</h1><p>Tutaj trafia lista wszystkich zleceń. Dashboard zostaje prosty i szybki.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab " href="dashboard.html">Dashboard</a><a class="tab active" href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
+  
+<div class="card">
+  <div class="card-header">
+    <div><h3>Lista zleceń</h3><p>Osobna zakładka zleceń — bez przeładowania dashboardu.</p></div>
+    <div class="header-inline">
+      <a class="btn btn-secondary" href="zlecenie.html">+ Dodaj zlecenie</a>
+    </div>
+  </div>
+  <div class="card-body">
+    <table>
+      <thead><tr><th>Nazwa</th><th>Klient</th><th>Kategorie</th><th>Etap</th><th>Termin</th><th>Status</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><strong>Regał sklepowy</strong><div class="small">OR-1</div></td><td>Orlen</td><td>Produkcja + montaż</td><td>Realizacja</td><td><span class="overdue">po terminie</span></td><td><span class="badge danger">Wymaga uwagi</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Szczegóły</a></td></tr>
+        <tr><td><strong>Baner promocyjny</strong></td><td>Telekom</td><td>Produkcja + montaż</td><td>Planowanie</td><td><span class="on-time">w czasie</span></td><td><span class="badge violet">Planowanie</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Szczegóły</a></td></tr>
+        <tr><td><strong>Stand expo</strong></td><td>Żabka</td><td>Produkcja + montaż + demontaż</td><td>Akceptacja</td><td><span class="on-time">dziś</span></td><td><span class="badge success">U klienta</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Szczegóły</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main></div></body></html>
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Szczegóły zlecenia</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Szczegóły zlecenia</h1><p>Tu jest formularz i cała logika zlecenia. Dashboard jest osobno, więc ten ekran jest spokojniejszy.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab " href="dashboard.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab active" href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
+  
+<div class="grid-2">
+  <div>
+    <div class="card">
+      <div class="card-header">
+        <div><h3>Szczegóły zlecenia</h3><p>Jedno zlecenie może mieć kilka etapów, np. produkcję i montaż.</p></div>
+        <div class="header-inline"><span class="badge violet">Planowanie</span><a class="btn btn-primary" href="#">Zapisz</a></div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid">
+          <div class="field"><label>Nazwa zlecenia</label><div class="input">Regał sklepowy</div></div>
+          <div class="field"><label>Klient</label><div class="input">Orlen</div></div>
+        </div>
+        <div class="form-grid-3" style="margin-top:18px;">
+          <div class="field"><label>Data zlecenia</label><div class="input">26.03.2026</div></div>
+          <div class="field"><label>Data realizacji</label><div class="input">23.04.2026</div></div>
+          <div class="field"><label>Data zakończenia</label><div class="input">30.04.2026</div></div>
+        </div>
+        <div class="field" style="margin-top:18px;">
+          <label>Kategorie zlecenia</label>
+          <div class="header-inline">
+            <span class="badge warning">Produkcja banera</span>
+            <span class="badge info">Montaż na miejscu</span>
+          </div>
+          <div class="small" style="margin-top:8px;">To rozwiązuje problem zlecenia typu „postawienie banera”, które w praktyce składa się z produkcji i montażu.</div>
+        </div>
+        <div class="field" style="margin-top:18px;">
+          <label>Pozycje / etapy</label>
+          <table>
+            <thead><tr><th>Etap</th><th>Opis</th><th>Ilość</th><th>Uwagi</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge warning">Produkcja</span></td><td>Druk banera 300x200 cm</td><td>1</td><td>Baner matowy</td></tr>
+              <tr><td><span class="badge info">Montaż</span></td><td>Montaż banera na miejscu</td><td>1</td><td>2 zdjęcia po montażu</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="workflow">
+          <span class="active">Zlecenie</span><span>Kosztorys</span><span>Planowanie</span><span>Realizacja</span><span>Rozliczenie</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <div class="card-header"><div><h3>Historia zmian</h3><p>Osobny panel w biurze.</p></div></div>
+      <div class="card-body history">
+        <div class="history-item"><span class="history-dot dot-blue"></span><div class="history-title">Nowe zlecenie utworzone <span class="badge info">Nowe</span></div><div class="history-desc">10.02.2026, 09:15 • Jan Kowalski (Biuro)</div></div>
+        <div class="history-item"><span class="history-dot dot-violet"></span><div class="history-title">Rozpoczęto planowanie <span class="badge violet">Planowanie</span></div><div class="history-desc">21.02.2026, 08:45 • Jan Kowalski (Biuro)</div></div>
+        <div class="history-item"><span class="history-dot dot-orange"></span><div class="history-title">Przekazano do realizacji <span class="badge warning">Realizacja</span></div><div class="history-desc">10.03.2026, 09:00 • Jan Kowalski (Biuro)</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main></div></body></html>
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Dashboard</h1><p>Osobny ekran główny, żeby od razu widzieć stan zleceń bez mieszania go z formularzem zlecenia.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab active" href="dashboard.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
+  
+<div class="grid-2">
+  <div>
+    <div class="card">
+      <div class="card-header">
+        <div><h3>Dashboard biura</h3><p>Najważniejszy pierwszy widok: szybki stan zleceń, terminów i akceptacji.</p></div>
+      </div>
+      <div class="card-body">
+        <div class="stats">
+          <div class="stat"><div class="label">Aktywne zlecenia</div><div class="value">18</div><div class="small">5 nowych w tym tygodniu</div></div>
+          <div class="stat"><div class="label">Po terminie</div><div class="value overdue">4</div><div class="small">wymagają reakcji biura</div></div>
+          <div class="stat"><div class="label">Do akceptacji klienta</div><div class="value">3</div><div class="small">wysłane przez biuro</div></div>
+          <div class="stat"><div class="label">Monterzy w realizacji</div><div class="value">7</div><div class="small">2 kończą dziś prace</div></div>
+        </div>
+        <table>
+          <thead><tr><th>Zlecenie</th><th>Klient</th><th>Etap</th><th>Termin</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><strong>Regał sklepowy – Kartuzy</strong></td><td>Orlen</td><td>Realizacja</td><td><span class="overdue">po terminie o 1 dzień</span></td><td><span class="badge danger">Wymaga uwagi</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Otwórz</a></td></tr>
+            <tr><td><strong>Baner promocyjny – Gdańsk</strong></td><td>Telekom</td><td>Planowanie</td><td><span class="on-time">w czasie</span></td><td><span class="badge violet">Planowanie</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Otwórz</a></td></tr>
+            <tr><td><strong>Stand expo – Poznań</strong></td><td>Żabka</td><td>Akceptacja</td><td><span class="on-time">dziś</span></td><td><span class="badge success">U klienta</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Otwórz</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><h3>Podział po etapach</h3><p>Jedno zlecenie może mieć np. produkcję i montaż.</p></div></div>
+      <div class="card-body">
+        <div class="grid-3">
+          <div class="vendor-card"><div class="vendor-head"><strong>Nowe</strong><span class="badge gray">6</span></div></div>
+          <div class="vendor-card"><div class="vendor-head"><strong>Planowanie</strong><span class="badge violet">4</span></div></div>
+          <div class="vendor-card"><div class="vendor-head"><strong>Realizacja</strong><span class="badge warning">5</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <div class="card-header"><div><h3>Szybkie alerty</h3><p>Terminy mają znaczenie dla widoczności priorytetów.</p></div></div>
+      <div class="card-body list">
+        <div class="task-card"><div class="task-top"><div><div class="task-title">4 zlecenia po terminie</div><div class="task-meta">Sprawdź opóźnienia w realizacji i brakujące zdjęcia.</div></div><span class="badge danger">Pilne</span></div></div>
+        <div class="task-card"><div class="task-top"><div><div class="task-title">3 etapy czekają na akceptację klienta</div><div class="task-meta">Biuro już wysłało je do panelu klienta.</div></div><span class="badge success">Akceptacja</span></div></div>
+        <div class="task-card"><div class="task-top"><div><div class="task-title">2 zadania montera bez zdjęć obowiązkowych</div><div class="task-meta">Nie można ich domknąć bez dokumentacji.</div></div><span class="badge warning">Do poprawy</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main></div></body></html>
