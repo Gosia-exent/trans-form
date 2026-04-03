@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel klienta</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Panel klienta</h1><p>Osobny widok klienta: podgląd, terminy i akceptacja dopiero po wysłaniu przez biuro.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab " href="dashboard.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab active" href="klient.html">Panel klienta</a></div>
+  
+<div class="grid-2">
+  <div>
+    <div class="card">
+      <div class="card-header"><div><h3>Panel klienta</h3><p>Klient podgląda status i akceptuje dopiero po wysłaniu etapu przez biuro.</p></div><a class="btn btn-primary" href="zlecenie.html">+ Dodaj zlecenie</a></div>
+      <div class="card-body">
+        <div class="stats">
+          <div class="stat"><div class="label">Postęp</div><div class="value">62%</div><div class="progress"><span style="width:62%"></span></div></div>
+          <div class="stat"><div class="label">Status ogólny</div><div class="value" style="font-size:22px;">Realizacja</div><div class="small">klient tylko podgląda</div></div>
+          <div class="stat"><div class="label">Termin</div><div class="value overdue" style="font-size:22px;">Po terminie</div><div class="small">widać to na dashboardzie</div></div>
+          <div class="stat"><div class="label">Do akceptacji</div><div class="value">0</div><div class="small">biuro jeszcze nie wysłało</div></div>
+        </div>
+        <div class="list">
+          <div class="vendor-card"><div class="vendor-head"><div><strong>MaxPrint – produkcja</strong><div class="small">Etap 1 zlecenia</div></div><span class="badge success">100%</span></div><div class="progress success"><span style="width:100%"></span></div></div>
+          <div class="vendor-card"><div class="vendor-head"><div><strong>Andrzej Nowicki – montaż</strong><div class="small">Etap 2 zlecenia</div></div><span class="badge warning">45%</span></div><div class="progress warning"><span style="width:45%"></span></div><div class="small">Klient widzi postęp, ale jeszcze nic nie akceptuje.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <div class="card-header"><div><h3>Akceptacja klienta</h3><p>Ten blok pojawia się dopiero, gdy biuro wyśle etap do akceptacji.</p></div></div>
+      <div class="card-body list">
+        <div class="task-card"><div class="task-top"><div><div class="task-title">Etap: montaż banera</div><div class="task-meta">Status obecny: oczekuje na weryfikację biura</div></div><span class="badge gray">Jeszcze bez akcji klienta</span></div></div>
+        <div class="task-card"><div class="task-top"><div><div class="task-title">Przykład po wysłaniu przez biuro</div><div class="task-meta">Tutaj klient może zaakceptować etap.</div></div><span class="badge success">Gotowe do akceptacji</span></div><div class="header-inline"><a class="btn btn-secondary" href="#">Podgląd dokumentacji</a><a class="btn btn-primary" href="#">Akceptuj etap</a></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main></div></body></html>
