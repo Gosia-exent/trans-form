@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel montera</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Panel montera</h1><p>Osobna strona z aktualnym zleceniem i historią wykonanych zadań.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab " href="dashboard.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab active" href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
+  
+<div class="card">
+  <div class="card-header"><div><h3>Panel montera</h3><p>Najpierw aktywne zlecenie, niżej archiwum zrealizowanych zadań.</p></div><span class="badge info">Andrzej Nowicki</span></div>
+  <div class="card-body">
+    <div class="subtitle"><div><div class="section-title">Aktualne zlecenie</div><h4>Regał sklepowy – etap montażu</h4></div><span class="badge danger">po terminie</span></div>
+    <div class="task-card" style="margin-bottom:18px;">
+      <div class="task-top">
+        <div><div class="task-title">Montaż banera na miejscu</div><div class="task-meta">Termin: 23.04.2026, 08:00 • Lokalizacja: Kartuzy</div></div>
+        <div class="header-inline"><span class="badge info">Zdjęcie obowiązkowe</span><span class="badge warning">W trakcie</span></div>
+      </div>
+      <div class="list">
+        <div>☑ Dojazd na miejsce</div><div>☑ Rozpakowanie materiałów</div><div>☑ Montaż banera</div><div>☐ Dodanie zdjęcia frontu</div>
+      </div>
+      <div class="photo-box">Monter może oznaczyć, że zdjęcie jest wymagane przez zadanie. Jeśli zdjęcie nie było obowiązkowe, karta nie blokuje zamknięcia.</div>
+    </div>
+    <div class="subtitle"><div><div class="section-title">Zrealizowane zadania</div></div><span class="badge success">archiwum</span></div>
+    <div class="list">
+      <div class="task-card"><div class="task-top"><div><div class="task-title">Ustawienie ekspozytora</div><div class="task-meta">Wykonano 19.04.2026</div></div><span class="badge success">Zaakceptowane przez biuro</span></div></div>
+      <div class="task-card"><div class="task-top"><div><div class="task-title">Montaż cenówek przy kasie</div><div class="task-meta">Wykonano 20.04.2026</div></div><span class="badge success">Przekazane do klienta</span></div></div>
+    </div>
+  </div>
+</div>
+
+</main></div></body></html>
