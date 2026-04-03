@@ -3,210 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard biura</title>
+  <title>Panel montera</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app">
     <aside class="sidebar">
       <div class="logo">Q</div>
-      <a class="side-icon active" href="index.html">🏠</a>
+      <a class="side-icon" href="index.html">🏠</a>
       <a class="side-icon" href="zlecenia.html">📄</a>
       <a class="side-icon" href="zlecenie.html">🗓️</a>
-      <a class="side-icon" href="monter.html">🛠️</a>
+      <a class="side-icon active" href="monter.html">🛠️</a>
       <a class="side-icon" href="klient.html">👤</a>
     </aside>
 
     <main class="main">
       <div class="topbar">
         <div class="title-wrap">
-          <h1>Dashboard biura</h1>
-          <p>Główny widok operacyjny biura: statusy, terminy, progres monterów i szybki podgląd innych paneli.</p>
+          <h1>Panel montera</h1>
+          <p>Osobny panel po logowaniu: aktywne zlecenie, zadania i archiwum wcześniejszych realizacji.</p>
         </div>
         <div class="top-actions">
-          <a class="btn btn-secondary" href="monter.html">Podgląd panelu montera</a>
-          <a class="btn btn-secondary" href="klient.html">Podgląd panelu klienta</a>
-          <a class="btn btn-primary" href="zlecenie.html">+ Dodaj zlecenie</a>
+          <a class="btn btn-secondary" href="index.html">Powrót do biura</a>
         </div>
       </div>
 
       <div class="tabs">
-        <a class="tab active" href="index.html">Dashboard</a>
-        <a class="tab" href="zlecenia.html">Zlecenia</a>
-        <a class="tab" href="zlecenie.html">Szczegóły zlecenia</a>
+        <a class="tab active" href="monter.html">Moje zlecenia</a>
+        <a class="tab" href="#archiwum">Archiwum</a>
       </div>
 
-      <div class="grid-2">
-        <div>
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <h3>Status realizacji</h3>
-                <p>Najważniejsze rzeczy do ogarnięcia dziś.</p>
-              </div>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3>Aktywne zlecenie</h3>
+            <p>Monter widzi tylko swoje aktualne zlecenie i przypisane zadania.</p>
+          </div>
+          <span class="badge info">Andrzej Nowicki</span>
+        </div>
+        <div class="card-body">
+          <div class="subtitle">
+            <div>
+              <div class="section-title">Aktualnie realizowane</div>
+              <h4>Regał sklepowy – Kartuzy</h4>
             </div>
-            <div class="card-body">
-              <div class="stats">
-                <div class="stat">
-                  <div class="label">Aktywne zlecenia</div>
-                  <div class="value">18</div>
-                  <div class="small">5 nowych w tym tygodniu</div>
-                </div>
-                <div class="stat">
-                  <div class="label">Po terminie</div>
-                  <div class="value overdue">4</div>
-                  <div class="small">wymagają pilnej reakcji</div>
-                </div>
-                <div class="stat">
-                  <div class="label">Do akceptacji klienta</div>
-                  <div class="value">3</div>
-                  <div class="small">wysłane przez biuro</div>
-                </div>
-                <div class="stat">
-                  <div class="label">Monterzy aktywni dziś</div>
-                  <div class="value">7</div>
-                  <div class="small">2 kończą dziś etap</div>
-                </div>
-              </div>
-
-              <table>
-                <thead>
-                  <tr>
-                    <th>Zlecenie</th>
-                    <th>Klient</th>
-                    <th>Etap</th>
-                    <th>Termin</th>
-                    <th>Postęp montera</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Regał sklepowy – Kartuzy</strong></td>
-                    <td>Orlen</td>
-                    <td>Realizacja</td>
-                    <td><span class="overdue">Po terminie o 1 dzień</span></td>
-                    <td>45%</td>
-                    <td><span class="badge danger">Wymaga uwagi</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Baner promocyjny – Gdańsk</strong></td>
-                    <td>Telekom</td>
-                    <td>Planowanie</td>
-                    <td><span class="on-time">W czasie</span></td>
-                    <td>0%</td>
-                    <td><span class="badge violet">Planowanie</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Stand expo – Poznań</strong></td>
-                    <td>Żabka</td>
-                    <td>Akceptacja</td>
-                    <td><span class="on-time">Dziś</span></td>
-                    <td>100%</td>
-                    <td><span class="badge success">U klienta</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <span class="badge danger">Po terminie</span>
           </div>
 
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <h3>Progres monterów</h3>
-                <p>Biuro widzi dokładnie, co zostało wykonane przez montera.</p>
-              </div>
-            </div>
-            <div class="card-body list">
-              <div class="task-card">
-                <div class="task-top">
-                  <div>
-                    <div class="task-title">Andrzej Nowicki – Regał sklepowy</div>
-                    <div class="task-meta">Etap: montaż • Kartuzy</div>
-                  </div>
-                  <span class="badge warning">45%</span>
+          <div class="list" style="margin-top:18px;">
+            <div class="task-card">
+              <div class="task-top">
+                <div>
+                  <div class="task-title">Zadanie 1: Montaż banera na miejscu</div>
+                  <div class="task-meta">Termin: 23.04.2026, 08:00 • Lokalizacja: Kartuzy</div>
                 </div>
-                <div class="small">Wykonane: dojazd, rozpakowanie, montaż. Brakuje obowiązkowych zdjęć końcowych.</div>
-                <div class="progress warning"><span style="width:45%"></span></div>
+                <div class="header-inline">
+                  <span class="badge warning">W trakcie</span>
+                  <span class="badge info">Zdjęcie wymagane</span>
+                </div>
               </div>
 
-              <div class="task-card">
-                <div class="task-top">
-                  <div>
-                    <div class="task-title">Piotr Malec – Stand expo</div>
-                    <div class="task-meta">Etap: montaż końcowy • Poznań</div>
-                  </div>
-                  <span class="badge success">100%</span>
+              <div class="list">
+                <div>☑ Dojazd na miejsce</div>
+                <div>☑ Rozpakowanie materiałów</div>
+                <div>☑ Montaż banera</div>
+                <div>☐ Dodanie zdjęcia frontu</div>
+                <div>☐ Dodanie zdjęcia szerokiego planu</div>
+              </div>
+
+              <div class="photo-box">
+                To zadanie wymaga zdjęć. Dopóki nie dodasz zdjęcia, nie możesz oznaczyć zadania jako wykonanego.
+              </div>
+
+              <div class="header-inline">
+                <a class="btn btn-secondary" href="#">Dodaj zdjęcie</a>
+                <a class="btn btn-secondary" href="#">Zapisz postęp</a>
+                <span class="btn-disabled">Nie można zakończyć bez zdjęcia</span>
+              </div>
+            </div>
+
+            <div class="task-card">
+              <div class="task-top">
+                <div>
+                  <div class="task-title">Zadanie 2: Montaż cenówek przy kasie</div>
+                  <div class="task-meta">Termin: dziś, 13:00</div>
                 </div>
-                <div class="small">Zadania zakończone, dokumentacja wysłana do klienta.</div>
-                <div class="progress success"><span style="width:100%"></span></div>
+                <div class="header-inline">
+                  <span class="badge success">Gotowe do zamknięcia</span>
+                  <span class="badge gray">Zdjęcie opcjonalne</span>
+                </div>
+              </div>
+
+              <div class="photo-box">
+                W tym zadaniu zdjęcie nie jest wymagane, więc możesz od razu oznaczyć je jako wykonane.
+              </div>
+
+              <div class="header-inline">
+                <a class="btn btn-secondary" href="#">Dodaj zdjęcie</a>
+                <a class="btn btn-primary" href="#">Oznacz jako wykonane</a>
+              </div>
+            </div>
+
+            <div class="task-card">
+              <div class="task-top">
+                <div>
+                  <div class="task-title">Zadanie 3: Sprawdzenie poziomów ekspozycji</div>
+                  <div class="task-meta">Termin: dziś, 15:00</div>
+                </div>
+                <div class="header-inline">
+                  <span class="badge gray">Do wykonania</span>
+                </div>
+              </div>
+
+              <div class="photo-box">
+                To zadanie nie wymaga żadnego pliku. Monter może je po prostu odhaczyć.
+              </div>
+
+              <div class="header-inline">
+                <a class="btn btn-primary" href="#">Oznacz jako wykonane</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div>
-          <div class="card">
-            <div class="card-header">
+      <div class="card" id="archiwum">
+        <div class="card-header">
+          <div>
+            <h3>Archiwum montera</h3>
+            <p>Poprzednio zrealizowane zadania i zlecenia.</p>
+          </div>
+        </div>
+        <div class="card-body list">
+          <div class="task-card">
+            <div class="task-top">
               <div>
-                <h3>Szybkie alerty</h3>
-                <p>Najważniejsze rzeczy wymagające reakcji.</p>
+                <div class="task-title">Ustawienie ekspozytora</div>
+                <div class="task-meta">Wykonano 19.04.2026</div>
               </div>
-            </div>
-            <div class="card-body list">
-              <div class="task-card">
-                <div class="task-top">
-                  <div>
-                    <div class="task-title">4 zlecenia po terminie</div>
-                    <div class="task-meta">Sprawdź opóźnienia i brakujące zdjęcia.</div>
-                  </div>
-                  <span class="badge danger">Pilne</span>
-                </div>
-              </div>
-              <div class="task-card">
-                <div class="task-top">
-                  <div>
-                    <div class="task-title">3 etapy czekają na akceptację klienta</div>
-                    <div class="task-meta">Biuro wysłało już dokumentację.</div>
-                  </div>
-                  <span class="badge success">Akceptacja</span>
-                </div>
-              </div>
-              <div class="task-card">
-                <div class="task-top">
-                  <div>
-                    <div class="task-title">2 zadania zablokowane przez brak pliku</div>
-                    <div class="task-meta">Monter nie może ich zamknąć bez uploadu.</div>
-                  </div>
-                  <span class="badge warning">Do poprawy</span>
-                </div>
-              </div>
+              <span class="badge success">Zaakceptowane przez biuro</span>
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-header">
+          <div class="task-card">
+            <div class="task-top">
               <div>
-                <h3>Historia zmian</h3>
-                <p>Podgląd zmian w zleceniu z poziomu biura.</p>
+                <div class="task-title">Montaż cenówek przy kasie</div>
+                <div class="task-meta">Wykonano 20.04.2026</div>
               </div>
-            </div>
-            <div class="card-body history">
-              <div class="history-item">
-                <span class="history-dot dot-blue"></span>
-                <div class="history-title">Nowe zlecenie utworzone <span class="badge info">Nowe</span></div>
-                <div class="history-desc">10.02.2026, 09:15 • Jan Kowalski (Biuro)</div>
-              </div>
-              <div class="history-item">
-                <span class="history-dot dot-violet"></span>
-                <div class="history-title">Rozpoczęto planowanie <span class="badge violet">Planowanie</span></div>
-                <div class="history-desc">21.02.2026, 08:45 • Jan Kowalski (Biuro)</div>
-              </div>
-              <div class="history-item">
-                <span class="history-dot dot-orange"></span>
-                <div class="history-title">Przekazano do realizacji <span class="badge warning">Realizacja</span></div>
-                <div class="history-desc">10.03.2026, 09:00 • Jan Kowalski (Biuro)</div>
-              </div>
+              <span class="badge success">Przekazane do klienta</span>
             </div>
           </div>
         </div>
