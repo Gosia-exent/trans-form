@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zlecenia</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <div class="logo">Q</div>
+  <a class="side-icon" href="dashboard.html">🏠</a>
+  <a class="side-icon" href="zlecenia.html">📄</a>
+  <a class="side-icon" href="zlecenie.html">🗓️</a>
+  <a class="side-icon" href="monter.html">🛠️</a>
+  <a class="side-icon" href="klient.html">👤</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="title-wrap"><h1>Zlecenia</h1><p>Tutaj trafia lista wszystkich zleceń. Dashboard zostaje prosty i szybki.</p></div>
+    <div class="top-actions">
+      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
+      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
+    </div>
+  </div>
+  <div class="tabs"><a class="tab " href="dashboard.html">Dashboard</a><a class="tab active" href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
+  
+<div class="card">
+  <div class="card-header">
+    <div><h3>Lista zleceń</h3><p>Osobna zakładka zleceń — bez przeładowania dashboardu.</p></div>
+    <div class="header-inline">
+      <a class="btn btn-secondary" href="zlecenie.html">+ Dodaj zlecenie</a>
+    </div>
+  </div>
+  <div class="card-body">
+    <table>
+      <thead><tr><th>Nazwa</th><th>Klient</th><th>Kategorie</th><th>Etap</th><th>Termin</th><th>Status</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><strong>Regał sklepowy</strong><div class="small">OR-1</div></td><td>Orlen</td><td>Produkcja + montaż</td><td>Realizacja</td><td><span class="overdue">po terminie</span></td><td><span class="badge danger">Wymaga uwagi</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Szczegóły</a></td></tr>
+        <tr><td><strong>Baner promocyjny</strong></td><td>Telekom</td><td>Produkcja + montaż</td><td>Planowanie</td><td><span class="on-time">w czasie</span></td><td><span class="badge violet">Planowanie</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Szczegóły</a></td></tr>
+        <tr><td><strong>Stand expo</strong></td><td>Żabka</td><td>Produkcja + montaż + demontaż</td><td>Akceptacja</td><td><span class="on-time">dziś</span></td><td><span class="badge success">U klienta</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Szczegóły</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main></div></body></html>
