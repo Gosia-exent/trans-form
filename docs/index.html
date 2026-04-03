@@ -1,71 +1,217 @@
 <!DOCTYPE html>
-<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard</title><link rel="stylesheet" href="styles.css"></head>
-<body><div class="app">
-<aside class="sidebar">
-  <div class="logo">Q</div>
-  <a class="side-icon" href="index.html">🏠</a>
-  <a class="side-icon" href="zlecenia.html">📄</a>
-  <a class="side-icon" href="zlecenie.html">🗓️</a>
-  <a class="side-icon" href="monter.html">🛠️</a>
-  <a class="side-icon" href="klient.html">👤</a>
-</aside>
-<main class="main">
-  <div class="topbar">
-    <div class="title-wrap"><h1>Dashboard</h1><p>Osobny ekran główny, żeby od razu widzieć stan zleceń bez mieszania go z formularzem zlecenia.</p></div>
-    <div class="top-actions">
-      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
-      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
-    </div>
-  </div>
-  <div class="tabs"><a class="tab active" href="index.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab " href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
-  
-<div class="grid-2">
-  <div>
-    <div class="card">
-      <div class="card-header">
-        <div><h3>Dashboard biura</h3><p>Najważniejszy pierwszy widok: szybki stan zleceń, terminów i akceptacji.</p></div>
-      </div>
-      <div class="card-body">
-        <div class="stats">
-          <div class="stat"><div class="label">Aktywne zlecenia</div><div class="value">18</div><div class="small">5 nowych w tym tygodniu</div></div>
-          <div class="stat"><div class="label">Po terminie</div><div class="value overdue">4</div><div class="small">wymagają reakcji biura</div></div>
-          <div class="stat"><div class="label">Do akceptacji klienta</div><div class="value">3</div><div class="small">wysłane przez biuro</div></div>
-          <div class="stat"><div class="label">Monterzy w realizacji</div><div class="value">7</div><div class="small">2 kończą dziś prace</div></div>
-        </div>
-        <table>
-          <thead><tr><th>Zlecenie</th><th>Klient</th><th>Etap</th><th>Termin</th><th>Status</th><th></th></tr></thead>
-          <tbody>
-            <tr><td><strong>Regał sklepowy – Kartuzy</strong></td><td>Orlen</td><td>Realizacja</td><td><span class="overdue">po terminie o 1 dzień</span></td><td><span class="badge danger">Wymaga uwagi</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Otwórz</a></td></tr>
-            <tr><td><strong>Baner promocyjny – Gdańsk</strong></td><td>Telekom</td><td>Planowanie</td><td><span class="on-time">w czasie</span></td><td><span class="badge violet">Planowanie</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Otwórz</a></td></tr>
-            <tr><td><strong>Stand expo – Poznań</strong></td><td>Żabka</td><td>Akceptacja</td><td><span class="on-time">dziś</span></td><td><span class="badge success">U klienta</span></td><td><a class="btn btn-secondary" href="zlecenie.html">Otwórz</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard biura</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">Q</div>
+      <a class="side-icon active" href="index.html">🏠</a>
+      <a class="side-icon" href="zlecenia.html">📄</a>
+      <a class="side-icon" href="zlecenie.html">🗓️</a>
+      <a class="side-icon" href="monter.html">🛠️</a>
+      <a class="side-icon" href="klient.html">👤</a>
+    </aside>
 
-    <div class="card">
-      <div class="card-header"><div><h3>Podział po etapach</h3><p>Jedno zlecenie może mieć np. produkcję i montaż.</p></div></div>
-      <div class="card-body">
-        <div class="grid-3">
-          <div class="vendor-card"><div class="vendor-head"><strong>Nowe</strong><span class="badge gray">6</span></div></div>
-          <div class="vendor-card"><div class="vendor-head"><strong>Planowanie</strong><span class="badge violet">4</span></div></div>
-          <div class="vendor-card"><div class="vendor-head"><strong>Realizacja</strong><span class="badge warning">5</span></div></div>
+    <main class="main">
+      <div class="topbar">
+        <div class="title-wrap">
+          <h1>Dashboard biura</h1>
+          <p>Główny widok operacyjny biura: statusy, terminy, progres monterów i szybki podgląd innych paneli.</p>
+        </div>
+        <div class="top-actions">
+          <a class="btn btn-secondary" href="monter.html">Podgląd panelu montera</a>
+          <a class="btn btn-secondary" href="klient.html">Podgląd panelu klienta</a>
+          <a class="btn btn-primary" href="zlecenie.html">+ Dodaj zlecenie</a>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div>
-    <div class="card">
-      <div class="card-header"><div><h3>Szybkie alerty</h3><p>Terminy mają znaczenie dla widoczności priorytetów.</p></div></div>
-      <div class="card-body list">
-        <div class="task-card"><div class="task-top"><div><div class="task-title">4 zlecenia po terminie</div><div class="task-meta">Sprawdź opóźnienia w realizacji i brakujące zdjęcia.</div></div><span class="badge danger">Pilne</span></div></div>
-        <div class="task-card"><div class="task-top"><div><div class="task-title">3 etapy czekają na akceptację klienta</div><div class="task-meta">Biuro już wysłało je do panelu klienta.</div></div><span class="badge success">Akceptacja</span></div></div>
-        <div class="task-card"><div class="task-top"><div><div class="task-title">2 zadania montera bez zdjęć obowiązkowych</div><div class="task-meta">Nie można ich domknąć bez dokumentacji.</div></div><span class="badge warning">Do poprawy</span></div></div>
+      <div class="tabs">
+        <a class="tab active" href="index.html">Dashboard</a>
+        <a class="tab" href="zlecenia.html">Zlecenia</a>
+        <a class="tab" href="zlecenie.html">Szczegóły zlecenia</a>
       </div>
-    </div>
-  </div>
-</div>
 
-</main></div></body></html>
+      <div class="grid-2">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Status realizacji</h3>
+                <p>Najważniejsze rzeczy do ogarnięcia dziś.</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="stats">
+                <div class="stat">
+                  <div class="label">Aktywne zlecenia</div>
+                  <div class="value">18</div>
+                  <div class="small">5 nowych w tym tygodniu</div>
+                </div>
+                <div class="stat">
+                  <div class="label">Po terminie</div>
+                  <div class="value overdue">4</div>
+                  <div class="small">wymagają pilnej reakcji</div>
+                </div>
+                <div class="stat">
+                  <div class="label">Do akceptacji klienta</div>
+                  <div class="value">3</div>
+                  <div class="small">wysłane przez biuro</div>
+                </div>
+                <div class="stat">
+                  <div class="label">Monterzy aktywni dziś</div>
+                  <div class="value">7</div>
+                  <div class="small">2 kończą dziś etap</div>
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Zlecenie</th>
+                    <th>Klient</th>
+                    <th>Etap</th>
+                    <th>Termin</th>
+                    <th>Postęp montera</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Regał sklepowy – Kartuzy</strong></td>
+                    <td>Orlen</td>
+                    <td>Realizacja</td>
+                    <td><span class="overdue">Po terminie o 1 dzień</span></td>
+                    <td>45%</td>
+                    <td><span class="badge danger">Wymaga uwagi</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Baner promocyjny – Gdańsk</strong></td>
+                    <td>Telekom</td>
+                    <td>Planowanie</td>
+                    <td><span class="on-time">W czasie</span></td>
+                    <td>0%</td>
+                    <td><span class="badge violet">Planowanie</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stand expo – Poznań</strong></td>
+                    <td>Żabka</td>
+                    <td>Akceptacja</td>
+                    <td><span class="on-time">Dziś</span></td>
+                    <td>100%</td>
+                    <td><span class="badge success">U klienta</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Progres monterów</h3>
+                <p>Biuro widzi dokładnie, co zostało wykonane przez montera.</p>
+              </div>
+            </div>
+            <div class="card-body list">
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">Andrzej Nowicki – Regał sklepowy</div>
+                    <div class="task-meta">Etap: montaż • Kartuzy</div>
+                  </div>
+                  <span class="badge warning">45%</span>
+                </div>
+                <div class="small">Wykonane: dojazd, rozpakowanie, montaż. Brakuje obowiązkowych zdjęć końcowych.</div>
+                <div class="progress warning"><span style="width:45%"></span></div>
+              </div>
+
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">Piotr Malec – Stand expo</div>
+                    <div class="task-meta">Etap: montaż końcowy • Poznań</div>
+                  </div>
+                  <span class="badge success">100%</span>
+                </div>
+                <div class="small">Zadania zakończone, dokumentacja wysłana do klienta.</div>
+                <div class="progress success"><span style="width:100%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Szybkie alerty</h3>
+                <p>Najważniejsze rzeczy wymagające reakcji.</p>
+              </div>
+            </div>
+            <div class="card-body list">
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">4 zlecenia po terminie</div>
+                    <div class="task-meta">Sprawdź opóźnienia i brakujące zdjęcia.</div>
+                  </div>
+                  <span class="badge danger">Pilne</span>
+                </div>
+              </div>
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">3 etapy czekają na akceptację klienta</div>
+                    <div class="task-meta">Biuro wysłało już dokumentację.</div>
+                  </div>
+                  <span class="badge success">Akceptacja</span>
+                </div>
+              </div>
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">2 zadania zablokowane przez brak pliku</div>
+                    <div class="task-meta">Monter nie może ich zamknąć bez uploadu.</div>
+                  </div>
+                  <span class="badge warning">Do poprawy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Historia zmian</h3>
+                <p>Podgląd zmian w zleceniu z poziomu biura.</p>
+              </div>
+            </div>
+            <div class="card-body history">
+              <div class="history-item">
+                <span class="history-dot dot-blue"></span>
+                <div class="history-title">Nowe zlecenie utworzone <span class="badge info">Nowe</span></div>
+                <div class="history-desc">10.02.2026, 09:15 • Jan Kowalski (Biuro)</div>
+              </div>
+              <div class="history-item">
+                <span class="history-dot dot-violet"></span>
+                <div class="history-title">Rozpoczęto planowanie <span class="badge violet">Planowanie</span></div>
+                <div class="history-desc">21.02.2026, 08:45 • Jan Kowalski (Biuro)</div>
+              </div>
+              <div class="history-item">
+                <span class="history-dot dot-orange"></span>
+                <div class="history-title">Przekazano do realizacji <span class="badge warning">Realizacja</span></div>
+                <div class="history-desc">10.03.2026, 09:00 • Jan Kowalski (Biuro)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
