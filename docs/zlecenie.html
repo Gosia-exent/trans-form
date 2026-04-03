@@ -1,77 +1,256 @@
 <!DOCTYPE html>
-<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Szczegóły zlecenia</title><link rel="stylesheet" href="styles.css"></head>
-<body><div class="app">
-<aside class="sidebar">
-  <div class="logo">Q</div>
-  <a class="side-icon" href="index.html">🏠</a>
-  <a class="side-icon" href="zlecenia.html">📄</a>
-  <a class="side-icon" href="zlecenie.html">🗓️</a>
-  <a class="side-icon" href="monter.html">🛠️</a>
-  <a class="side-icon" href="klient.html">👤</a>
-</aside>
-<main class="main">
-  <div class="topbar">
-    <div class="title-wrap"><h1>Szczegóły zlecenia</h1><p>Tu jest formularz i cała logika zlecenia. Dashboard jest osobno, więc ten ekran jest spokojniejszy.</p></div>
-    <div class="top-actions">
-      <a class="btn btn-secondary" href="zlecenia.html">Lista zleceń</a>
-      <a class="btn btn-primary" href="zlecenie.html">Przykładowe zlecenie</a>
-    </div>
-  </div>
-  <div class="tabs"><a class="tab " href="index.html">Dashboard</a><a class="tab " href="zlecenia.html">Zlecenia</a><a class="tab active" href="zlecenie.html">Szczegóły zlecenia</a><a class="tab " href="monter.html">Panel montera</a><a class="tab " href="klient.html">Panel klienta</a></div>
-  
-<div class="grid-2">
-  <div>
-    <div class="card">
-      <div class="card-header">
-        <div><h3>Szczegóły zlecenia</h3><p>Jedno zlecenie może mieć kilka etapów, np. produkcję i montaż.</p></div>
-        <div class="header-inline"><span class="badge violet">Planowanie</span><a class="btn btn-primary" href="#">Zapisz</a></div>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Szczegóły zlecenia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">Q</div>
+      <a class="side-icon" href="index.html">🏠</a>
+      <a class="side-icon" href="zlecenia.html">📄</a>
+      <a class="side-icon active" href="zlecenie.html">🗓️</a>
+      <a class="side-icon" href="monter.html">🛠️</a>
+      <a class="side-icon" href="klient.html">👤</a>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="title-wrap">
+          <h1>Szczegóły zlecenia</h1>
+          <p>Widok biura do zarządzania zleceniem, etapami, zadaniami dla montera i historią zmian.</p>
+        </div>
+        <div class="top-actions">
+          <a class="btn btn-secondary" href="monter.html">Podgląd panelu montera</a>
+          <a class="btn btn-secondary" href="klient.html">Podgląd panelu klienta</a>
+          <a class="btn btn-primary" href="#">Zapisz</a>
+        </div>
       </div>
-      <div class="card-body">
-        <div class="form-grid">
-          <div class="field"><label>Nazwa zlecenia</label><div class="input">Regał sklepowy</div></div>
-          <div class="field"><label>Klient</label><div class="input">Orlen</div></div>
-        </div>
-        <div class="form-grid-3" style="margin-top:18px;">
-          <div class="field"><label>Data zlecenia</label><div class="input">26.03.2026</div></div>
-          <div class="field"><label>Data realizacji</label><div class="input">23.04.2026</div></div>
-          <div class="field"><label>Data zakończenia</label><div class="input">30.04.2026</div></div>
-        </div>
-        <div class="field" style="margin-top:18px;">
-          <label>Kategorie zlecenia</label>
-          <div class="header-inline">
-            <span class="badge warning">Produkcja banera</span>
-            <span class="badge info">Montaż na miejscu</span>
+
+      <div class="tabs">
+        <a class="tab" href="index.html">Dashboard</a>
+        <a class="tab" href="zlecenia.html">Zlecenia</a>
+        <a class="tab active" href="zlecenie.html">Szczegóły zlecenia</a>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Formularz zlecenia</h3>
+                <p>Ten sam formularz może być używany przez biuro i klienta, ale z różnymi uprawnieniami.</p>
+              </div>
+              <span class="badge violet">Planowanie</span>
+            </div>
+            <div class="card-body">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Nazwa zlecenia</label>
+                  <div class="input">Regał sklepowy</div>
+                </div>
+                <div class="field">
+                  <label>Klient</label>
+                  <div class="input">Orlen</div>
+                </div>
+              </div>
+
+              <div class="form-grid-3" style="margin-top:18px;">
+                <div class="field">
+                  <label>Data zlecenia</label>
+                  <div class="input">26.03.2026</div>
+                </div>
+                <div class="field">
+                  <label>Data realizacji</label>
+                  <div class="input">23.04.2026</div>
+                </div>
+                <div class="field">
+                  <label>Data zakończenia</label>
+                  <div class="input">30.04.2026</div>
+                </div>
+              </div>
+
+              <div class="field" style="margin-top:18px;">
+                <label>Kategorie zlecenia</label>
+                <div class="header-inline">
+                  <span class="badge warning">Produkcja banera</span>
+                  <span class="badge info">Montaż na miejscu</span>
+                </div>
+                <div class="small" style="margin-top:8px;">
+                  Jedno zlecenie może obejmować kilka etapów, np. produkcję i montaż.
+                </div>
+              </div>
+
+              <div class="field" style="margin-top:18px;">
+                <label>Opis</label>
+                <div class="input" style="min-height:120px;">
+                  Regał na stacji w Kartuzach. Etap 1: produkcja banera. Etap 2: montaż na miejscu wraz z dokumentacją zdjęciową.
+                </div>
+              </div>
+
+              <div class="field" style="margin-top:18px;">
+                <label>Etapy / pozycje</label>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Etap</th>
+                      <th>Opis</th>
+                      <th>Ilość</th>
+                      <th>Uwagi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge warning">Produkcja</span></td>
+                      <td>Druk banera 300x200 cm</td>
+                      <td>1</td>
+                      <td>Baner matowy</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge info">Montaż</span></td>
+                      <td>Montaż banera na miejscu</td>
+                      <td>1</td>
+                      <td>2 zdjęcia po montażu</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="workflow">
+                <span class="active">Zlecenie</span>
+                <span>Kosztorys</span>
+                <span>Planowanie</span>
+                <span>Realizacja</span>
+                <span>Rozliczenie</span>
+              </div>
+            </div>
           </div>
-          <div class="small" style="margin-top:8px;">To rozwiązuje problem zlecenia typu „postawienie banera”, które w praktyce składa się z produkcji i montażu.</div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Zadania dla montera</h3>
+                <p>Biuro planuje zadania i określa, czy wymagany jest plik / zdjęcie.</p>
+              </div>
+              <a class="btn btn-primary" href="#">+ Dodaj zadanie</a>
+            </div>
+            <div class="card-body list">
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">Montaż banera na miejscu</div>
+                    <div class="task-meta">Przypisany: Andrzej Nowicki • Termin: 23.04.2026</div>
+                  </div>
+                  <div class="header-inline">
+                    <span class="badge warning">W trakcie</span>
+                    <span class="badge info">Plik wymagany</span>
+                  </div>
+                </div>
+                <div class="small">Monter nie może zamknąć tego zadania bez wgrania wymaganych zdjęć.</div>
+              </div>
+
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">Montaż cenówek</div>
+                    <div class="task-meta">Przypisany: Andrzej Nowicki • Termin: 23.04.2026</div>
+                  </div>
+                  <div class="header-inline">
+                    <span class="badge success">Gotowe do zamknięcia</span>
+                    <span class="badge gray">Plik opcjonalny</span>
+                  </div>
+                </div>
+                <div class="small">To zadanie może być zamknięte bez dodawania pliku.</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="field" style="margin-top:18px;">
-          <label>Pozycje / etapy</label>
-          <table>
-            <thead><tr><th>Etap</th><th>Opis</th><th>Ilość</th><th>Uwagi</th></tr></thead>
-            <tbody>
-              <tr><td><span class="badge warning">Produkcja</span></td><td>Druk banera 300x200 cm</td><td>1</td><td>Baner matowy</td></tr>
-              <tr><td><span class="badge info">Montaż</span></td><td>Montaż banera na miejscu</td><td>1</td><td>2 zdjęcia po montażu</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="workflow">
-          <span class="active">Zlecenie</span><span>Kosztorys</span><span>Planowanie</span><span>Realizacja</span><span>Rozliczenie</span>
+
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Postęp realizacji</h3>
+                <p>Biuro widzi progres wykonania przez montera.</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="stats">
+                <div class="stat">
+                  <div class="label">Postęp zlecenia</div>
+                  <div class="value">62%</div>
+                  <div class="progress"><span style="width:62%"></span></div>
+                </div>
+                <div class="stat">
+                  <div class="label">Etap bieżący</div>
+                  <div class="value" style="font-size:20px;">Realizacja</div>
+                  <div class="small">Produkcja zakończona, montaż trwa</div>
+                </div>
+                <div class="stat">
+                  <div class="label">Termin</div>
+                  <div class="value overdue" style="font-size:20px;">Po terminie</div>
+                  <div class="small">1 dzień opóźnienia</div>
+                </div>
+                <div class="stat">
+                  <div class="label">Akceptacja klienta</div>
+                  <div class="value">0</div>
+                  <div class="small">Biuro jeszcze nie wysłało</div>
+                </div>
+              </div>
+
+              <div class="task-card">
+                <div class="task-top">
+                  <div>
+                    <div class="task-title">Andrzej Nowicki – montaż</div>
+                    <div class="task-meta">Wykonane: dojazd, rozpakowanie, montaż</div>
+                  </div>
+                  <span class="badge warning">45%</span>
+                </div>
+                <div class="small">Brakuje obowiązkowych zdjęć końcowych, dlatego etap nie może być zamknięty.</div>
+                <div class="progress warning"><span style="width:45%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Historia zmian</h3>
+                <p>Biuro ma pełny timeline zmian w zleceniu.</p>
+              </div>
+            </div>
+            <div class="card-body history">
+              <div class="history-item">
+                <span class="history-dot dot-blue"></span>
+                <div class="history-title">Nowe zlecenie utworzone <span class="badge info">Nowe</span></div>
+                <div class="history-desc">10.02.2026, 09:15 • Jan Kowalski (Biuro)</div>
+              </div>
+
+              <div class="history-item">
+                <span class="history-dot dot-violet"></span>
+                <div class="history-title">Rozpoczęto planowanie <span class="badge violet">Planowanie</span></div>
+                <div class="history-desc">21.02.2026, 08:45 • Jan Kowalski (Biuro)</div>
+              </div>
+
+              <div class="history-item">
+                <span class="history-dot dot-orange"></span>
+                <div class="history-title">Przypisano montera</div>
+                <div class="history-desc">22.02.2026, 10:00 • Andrzej Nowicki</div>
+              </div>
+
+              <div class="history-item">
+                <span class="history-dot dot-orange"></span>
+                <div class="history-title">Przekazano do realizacji <span class="badge warning">Realizacja</span></div>
+                <div class="history-desc">10.03.2026, 09:00 • Jan Kowalski (Biuro)</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   </div>
-
-  <div>
-    <div class="card">
-      <div class="card-header"><div><h3>Historia zmian</h3><p>Osobny panel w biurze.</p></div></div>
-      <div class="card-body history">
-        <div class="history-item"><span class="history-dot dot-blue"></span><div class="history-title">Nowe zlecenie utworzone <span class="badge info">Nowe</span></div><div class="history-desc">10.02.2026, 09:15 • Jan Kowalski (Biuro)</div></div>
-        <div class="history-item"><span class="history-dot dot-violet"></span><div class="history-title">Rozpoczęto planowanie <span class="badge violet">Planowanie</span></div><div class="history-desc">21.02.2026, 08:45 • Jan Kowalski (Biuro)</div></div>
-        <div class="history-item"><span class="history-dot dot-orange"></span><div class="history-title">Przekazano do realizacji <span class="badge warning">Realizacja</span></div><div class="history-desc">10.03.2026, 09:00 • Jan Kowalski (Biuro)</div></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</main></div></body></html>
+</body>
+</html>
